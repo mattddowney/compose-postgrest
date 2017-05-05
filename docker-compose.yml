@@ -15,3 +15,12 @@ services:
       # see "How to extend this image" section at https://hub.docker.com/r/_/postgres/
       - "./initdb:/docker-entrypoint-initdb.d"
     restart: always
+
+  postgrest:
+    container_name: postgrest
+    image: begriffs/postgrest:v0.4.1.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./postgrest.conf:/etc/postgrest.conf"
+    restart: always
