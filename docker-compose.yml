@@ -18,9 +18,12 @@ services:
 
   postgrest:
     container_name: postgrest
-    image: begriffs/postgrest:v0.4.1.0
+    build: ./postgrest
+    image: postgrest:v0.4.1.0
     ports:
       - "3000:3000"
-    volumes:
-      - "./postgrest.conf:/etc/postgrest.conf"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
     restart: always
