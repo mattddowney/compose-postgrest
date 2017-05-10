@@ -28,4 +28,6 @@ services:
       - POSTGRES_DB=${POSTGRES_PASSWORD}
       - DB_ANON_ROLE=${DB_ANON_ROLE}
       - DB_SCHEMA=${DB_SCHEMA}
+    volumes:
+      - "./postgrest.conf:/etc/postgrest.conf.template"
     restart: always

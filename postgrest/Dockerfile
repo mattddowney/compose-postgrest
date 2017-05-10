@@ -11,8 +11,6 @@ RUN wget http://github.com/begriffs/postgrest/releases/download/v${POSTGREST_VER
     mv postgrest /usr/local/bin/postgrest && \
     rm postgrest-${POSTGREST_VERSION}-ubuntu.tar.xz
 
-COPY postgrest.conf /etc/postgrest.conf.template
-
 # Populate postgrest.conf with environment variables
 CMD envsubst < /etc/postgrest.conf.template > /etc/postgrest.conf && \
     exec postgrest /etc/postgrest.conf
