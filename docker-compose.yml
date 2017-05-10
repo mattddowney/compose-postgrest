@@ -7,9 +7,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
     volumes:
       # anything in initdb directory is created in the database
       # see "How to extend this image" section at https://hub.docker.com/r/_/postgres/
@@ -23,7 +23,9 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_PASSWORD}
+      - DB_ANON_ROLE=${DB_ANON_ROLE}
+      - DB_SCHEMA=${DB_SCHEMA}
     restart: always
