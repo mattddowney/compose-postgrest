@@ -23,10 +23,10 @@ Located at [http://localhost:3000](http://localhost:3000)
 
 Try things like:
 * [http://localhost:3000/test](http://localhost:3000/test)
-* [http://localhost:3000/test?id=1](http://localhost:3000/test)
-* [http://localhost:3000/test?id=gte.2](http://localhost:3000/test)
-* [http://localhost:3000/test?id=gte.2&test=like.*STUFF](http://localhost:3000/test)
-* [http://localhost:3000/test?test=like.*STUFF&select=test](http://localhost:3000/test)
+* [http://localhost:3000/test?id=1](http://localhost:3000/test?id=1)
+* [http://localhost:3000/test?id=gte.2](http://localhost:3000/test?id=gte.2)
+* [http://localhost:3000/test?id=gte.2&test=like.*STUFF](http://localhost:3000/test?id=gte.2&test=like.*STUFF)
+* [http://localhost:3000/test?test=like.*STUFF&select=test](http://localhost:3000/test?test=like.*STUFF&select=test)
 
 Tearing down the containers:
 
