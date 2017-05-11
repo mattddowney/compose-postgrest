@@ -34,6 +34,7 @@ services:
       - PGHOST=db
       - PGPORT=5432
       - PGDATABASE=${POSTGRES_DB}
+    restart: always
 
   postgrest:
     container_name: postgrest
