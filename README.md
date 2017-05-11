@@ -1,9 +1,9 @@
 compose-postgrest
 =================
 
-Postgres and Postgrest, conveniently wrapped up with docker-compose.
+Postgres, PostGraphQL and Postgrest, conveniently wrapped up with docker-compose.
 
-Place SQL into the `initdb` folder, get REST!
+Place SQL into the `initdb` folder, get REST and GraphQL!
 
 Usage
 -----
@@ -12,7 +12,14 @@ Start the containers:
 
 `docker-compose up -d`
 
-Point your browser to http://localhost:3000
+**PostGraphQL**
+
+GraphQL located at [http://localhost:5000/graphql](http://localhost:5000/graphql)
+GraphiQL located at [http://localhost:5000/graphiql](http://localhost:5000/graphiql)
+
+**Postgrest**
+
+Located at [http://localhost:3000](http://localhost:3000)
 
 Try things like:
 * [http://localhost:3000/test](http://localhost:3000/test)
