@@ -1,10 +1,10 @@
 compose-postgrest
 =================
 
-Postgres, PostGraphQL and Postgrest, conveniently wrapped up with docker-compose.
+[Postgres](https://www.postgresql.org/), [PostgREST](https://github.com/begriffs/postgrest), and [Swagger UI](https://github.com/swagger-api/swagger-ui) conveniently wrapped up with docker-compose.
 
-Place SQL into the `initdb` folder, get REST and GraphQL! 
-Includes world sample database.
+Place SQL into the `initdb` folder, get REST! 
+Includes [world sample database](http://pgfoundry.org/projects/dbsamples/).
 
 Usage
 -----
@@ -12,12 +12,6 @@ Usage
 Start the containers:
 
 `docker-compose up -d`
-
-**PostGraphQL**
-
-GraphQL located at [http://localhost:5000/graphql](http://localhost:5000/graphql)
-
-GraphiQL located at [http://localhost:5000/graphiql](http://localhost:5000/graphiql)
 
 **Postgrest**
 
@@ -31,6 +25,10 @@ Try things like:
 * [http://localhost:3000/city?population=gte.5000000](http://localhost:3000/city?population=gte.5000000)
 * [http://localhost:3000/city?district=like.*Island](http://localhost:3000/city?district=like.*Island)
 * [http://localhost:3000/city?district=like.*Island&population=lt.1000&select=id,name](http://localhost:3000/city?district=like.*Island&population=lt.1000&select=id,name)
+
+**Swagger UI**
+
+Located at [http://localhost:8080](http://localhost:8080)
 
 Tearing down the containers:
 
