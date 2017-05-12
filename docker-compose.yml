@@ -18,24 +18,6 @@ services:
       - "./initdb:/docker-entrypoint-initdb.d"
     restart: always
 
-  postgraphql:
-    container_name: postgraphql
-    image: erasche/postgraphql
-    ports:
-      - "5000:5000"
-    environment:
-      #- DB_DEFAULT_ROLE=postgres
-      - DB_GRAPHQL_PATH=/graphql
-      - DB_GRAPHIQL_PATH=/graphiql
-      #- PG_SECRET=deadbeefcafe
-      - DB_SCHEMA=${DB_SCHEMA}
-      - PGUSER=${POSTGRES_USER}
-      - PGPASSWORD=${POSTGRES_PASSWORD}
-      - PGHOST=db
-      - PGPORT=5432
-      - PGDATABASE=${POSTGRES_DB}
-    restart: always
-
   postgrest:
     container_name: postgrest
     build: ./postgrest
