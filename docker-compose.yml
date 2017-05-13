@@ -35,6 +35,18 @@ services:
       - postgrest-backend
     restart: always
 
+  #########
+  # konga #
+  #########
+  konga:
+    container_name: konga
+    image: pantsel/konga:0.6.7
+    ports:
+      - "1337:1337"
+    networks:
+      - kong-backend
+    restart: always
+
   ################
   # postgrest-db #
   ################
