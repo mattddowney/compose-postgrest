@@ -16,6 +16,8 @@ services:
       # anything in initdb directory is created in the database
       # see "How to extend this image" section at https://hub.docker.com/r/_/postgres/
       - "./initdb:/docker-entrypoint-initdb.d"
+    networks:
+      - backend
     restart: always
 
   postgrest:
@@ -32,6 +34,8 @@ services:
       - DB_SCHEMA=${DB_SCHEMA}
     volumes:
       - "./postgrest.conf:/etc/postgrest.conf.template"
+    networks:
+      - backend
     restart: always
 
   swagger-ui:
@@ -42,3 +46,7 @@ services:
     environment:
       - API_URL=http://localhost:3000/
     restart: always
+
+networks:
+  backend:
+    driver: bridge
