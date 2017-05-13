@@ -19,7 +19,7 @@ services:
       # see "How to extend this image" section at https://hub.docker.com/r/_/postgres/
       - "./initdb:/docker-entrypoint-initdb.d"
     networks:
-      - backend
+      - postgrest-backend
     restart: always
 
   #############
@@ -40,7 +40,7 @@ services:
     volumes:
       - "./postgrest.conf:/etc/postgrest.conf.template"
     networks:
-      - backend
+      - postgrest-backend
     restart: always
 
   ##############
@@ -56,5 +56,5 @@ services:
     restart: always
 
 networks:
-  backend:
+  postgrest-backend:
     driver: bridge
