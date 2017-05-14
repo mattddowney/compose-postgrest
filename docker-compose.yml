@@ -56,8 +56,5 @@ services:
     restart: always
 
 networks:
-  kong-backend:
-    driver: bridge
-
   postgrest-backend:
     driver: bridge
