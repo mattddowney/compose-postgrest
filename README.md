@@ -9,9 +9,13 @@ Includes [world sample database](http://pgfoundry.org/projects/dbsamples/).
 Usage
 -----
 
-Start the containers:
+**Start the containers**
 
 `docker-compose up -d`
+
+**Tearing down the containers**
+
+`docker-compose down --remove-orphans -v`
 
 **Postgrest**
 
@@ -29,7 +33,3 @@ Try things like:
 **Swagger UI**
 
 Located at [http://localhost:8080](http://localhost:8080)
-
-Tearing down the containers:
-
-`docker-compose down --remove-orphans -v`
