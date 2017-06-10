@@ -12,6 +12,7 @@ app.addResultRows = function (rows) {
     }
 
     document.getElementById('results-table-body').innerHTML = rowsString;
+    app.showElement('results-table');
 }
 
 app.buildResultRowString = function (row) {
@@ -21,6 +22,10 @@ app.buildResultRowString = function (row) {
                 '<td>' + row.countrycode + '</td>' +
                 '<td>' + row.population + '</td>' +
             '</tr>';
+}
+
+app.showElement = function (id) {
+    document.getElementById(id).classList.remove('hidden');
 }
 
 app.queryCity = function (cityName) {
