@@ -40,3 +40,9 @@ app.queryCity = function (cityName) {
             app.addResultRows(j);
         })
 }
+
+app.searchClick = function () {
+    var city = document.getElementById('city-input').value;
+
+    app.queryCity(city);
+}

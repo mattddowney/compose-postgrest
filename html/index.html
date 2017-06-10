@@ -18,7 +18,7 @@
         <div class="pure-u-1-8"></div>
         <div class="pure-u-3-4">
             <h1>World Database</h1>
-            <form class="pure-form">
+            <form class="pure-form" onsubmit="event.preventDefault(); app.searchClick()">
                 <fieldset>
                     <input id="city-input" type="text" placeholder="City">
                     <button type="submit" class="pure-button pure-button-primary">Search</button>
