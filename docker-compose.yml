@@ -24,6 +24,18 @@ services:
       - postgrest-backend
     restart: always
 
+  ##################
+  # postgrest-demo #
+  ##################
+  postgrest-demo:
+    container_name: postgrest-demo
+    image: nginx:1.12.0-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - "./html:/usr/share/nginx/html"
+    restart: always
+
   #############
   # postgrest #
   #############
