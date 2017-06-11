@@ -33,6 +33,7 @@ services:
     ports:
       - "80:80"
     volumes:
+      # anything in html directory is hosted via nginx
       - "./html:/usr/share/nginx/html"
     restart: always
 
