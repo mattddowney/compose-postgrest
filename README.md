@@ -6,6 +6,8 @@ compose-postgrest
 Place SQL into the `initdb` folder, get REST! 
 Includes [world sample database](http://pgfoundry.org/projects/dbsamples/).
 
+Contains a simple front-end  demo application.
+
 Usage
 -----
 
@@ -16,6 +18,10 @@ Usage
 **Tearing down the containers**
 
 `docker-compose down --remove-orphans -v`
+
+**Demo Application**
+
+Located at [http://localhost](http://localhost)
 
 **Postgrest**
 
