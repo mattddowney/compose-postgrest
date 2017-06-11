@@ -6,9 +6,14 @@ var app = {};
 
 app.addResultRows = function (rows) {
     var rowsString = '';
+    var rowsLength = rows.length;
 
-    for (var i = 0, max = rows.length; i < max; i++) {
-        rowsString += app.buildResultRowString(rows[i]);
+    if (rowsLength > 0) {
+        for (var i = 0; i < rowsLength; i++) {
+            rowsString += app.buildResultRowString(rows[i]);
+        }
+    } else {
+        rowsString = '<tr><td colspan="4">Results not found</td></tr>';
     }
 
     document.getElementById('results-table-body').innerHTML = rowsString;
