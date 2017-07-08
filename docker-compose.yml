@@ -43,7 +43,7 @@ services:
   postgrest:
     container_name: postgrest
     build: ./postgrest
-    image: postgrest:v0.4.1.0
+    image: postgrest:v0.4.2.0
     ports:
       - "3000:3000"
     environment:

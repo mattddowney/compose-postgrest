@@ -1,6 +1,6 @@
 FROM debian:jessie-backports
 
-ENV POSTGREST_VERSION 0.4.1.0
+ENV POSTGREST_VERSION 0.4.2.0
 
 RUN apt-get update && \
     apt-get install -y tar xz-utils wget libpq-dev gettext-base && \
