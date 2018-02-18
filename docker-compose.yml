@@ -47,7 +47,7 @@ services:
       - "3000:3000"
     environment:
       # The standard connection URI format, documented at
-      # https://www.postgresql.org/docs/current/static/libpq-connect.html#AEN45347
+      # https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-CONNSTRING
       - PGRST_DB_URI=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgrest-db:5432/${POSTGRES_DB}
       # The name of which database schema to expose to REST clients
       - PGRST_DB_SCHEMA=${DB_SCHEMA}
