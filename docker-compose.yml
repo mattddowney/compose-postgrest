@@ -7,7 +7,7 @@ services:
   ################
   postgrest-db:
     container_name: postgrest-db
-    image: postgres:9.6.3-alpine
+    image: postgres:10.2-alpine
     ports:
       - "5432:5432"
     environment:
@@ -29,7 +29,7 @@ services:
   ##################
   postgrest-demo:
     container_name: postgrest-demo
-    image: nginx:1.12.0-alpine
+    image: nginx:1.12.2-alpine
     ports:
       - "80:80"
     volumes:
@@ -63,7 +63,7 @@ services:
   ##############
   swagger-ui:
     container_name: swagger-ui
-    image: swaggerapi/swagger-ui:v3.0.17
+    image: swaggerapi/swagger-ui:v3.10.0
     ports:
       - "8080:8080"
     environment:
