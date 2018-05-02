@@ -51,7 +51,7 @@ services:
       - PGRST_DB_URI=postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgrest-db:5432/${POSTGRES_DB}
       # The name of which database schema to expose to REST clients
       - PGRST_DB_SCHEMA=${DB_SCHEMA}
-      # The database role to use when no client authentication is provideds
+      # The database role to use when no client authentication is provided
       - PGRST_DB_ANON_ROLE=${DB_ANON_ROLE}
     networks:
       - postgrest-backend
