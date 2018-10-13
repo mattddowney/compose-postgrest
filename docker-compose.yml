@@ -29,7 +29,7 @@ services:
   ##################
   postgrest-demo:
     container_name: postgrest-demo
-    image: nginx:1.13.12-alpine
+    image: nginx:1.15.5-alpine
     ports:
       - "80:80"
     volumes:
