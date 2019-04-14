@@ -7,7 +7,7 @@ services:
   ################
   postgrest-db:
     container_name: postgrest-db
-    image: postgres:10.5-alpine
+    image: postgres:11-alpine
     ports:
       - "5432:5432"
     environment:
@@ -29,7 +29,7 @@ services:
   ##################
   postgrest-demo:
     container_name: postgrest-demo
-    image: nginx:1.15.5-alpine
+    image: nginx:mainline-alpine
     ports:
       - "80:80"
     volumes:
@@ -42,7 +42,7 @@ services:
   #############
   postgrest:
     container_name: postgrest
-    image: postgrest/postgrest:v5.1.0
+    image: postgrest/postgrest:latest
     ports:
       - "3000:3000"
     environment:
