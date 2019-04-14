@@ -27,8 +27,18 @@ node "Docker Host" as docker_host #91FFEC {
     }
 }
 
-folder "./html" as html
-folder "./initdb" as initdb
+folder html [
+    <b>./html</b>
+    ---
+    Static HTML, JS, etc
+]
+
+folder initdb [
+    <b>./initdb</b>
+    ---
+    SQL and shell scripts
+    run at database startup
+]
 
 client -right- nginx
 client -right- swagger_ui
@@ -39,6 +49,6 @@ postgrest -- postgres
 postgrest -left- swagger_ui
 
 nginx -right- html
-postgres -- initdb
+postgres -right- initdb
 
 @enduml
