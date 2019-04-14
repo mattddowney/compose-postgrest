@@ -8,6 +8,9 @@ Includes [world sample database](http://pgfoundry.org/projects/dbsamples/).
 
 Contains a simple front-end  demo application.
 
+Architecture
+------------
+
 ![Deployment Diagram](diagrams/deployment-diagram.png)
 
 Usage
