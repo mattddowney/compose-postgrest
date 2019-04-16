@@ -41,9 +41,9 @@ folder initdb [
 ]
 
 client -right- nginx
-client -right- swagger_ui
+client -- postgrest
+client -- swagger_ui
 
-nginx -- postgrest
 postgrest -- postgres
 
 postgrest -left- swagger_ui
