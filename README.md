@@ -4,7 +4,7 @@ compose-postgrest
 [Postgres](https://www.postgresql.org/), [PostgREST](https://github.com/begriffs/postgrest), and [Swagger UI](https://github.com/swagger-api/swagger-ui) conveniently wrapped up with docker-compose.
 
 Place SQL into the `initdb` folder, get REST! 
-Includes [world sample database](http://pgfoundry.org/projects/dbsamples/).
+Includes [world sample database](https://www.postgresql.org/ftp/projects/pgFoundry/dbsamples/world/).
 
 Contains a simple front-end  demo application.
 
