@@ -9,7 +9,7 @@ services:
     container_name: swagger-ui
     image: swaggerapi/swagger-ui:latest
     ports:
-      - "8080:8080"
+      - "8081:8080"
     environment:
       - API_URL=http://localhost:3000/
     restart: always
