@@ -45,6 +45,8 @@ services:
     image: postgrest/postgrest:latest
     ports:
       - "3000:3000"
+    # Available environment variables documented here:
+    # https://postgrest.org/en/latest/configuration.html#environment-variables
     environment:
       # The standard connection URI format, documented at
       # https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-CONNSTRING
@@ -53,6 +55,8 @@ services:
       - PGRST_DB_SCHEMA=${DB_SCHEMA}
       # The database role to use when no client authentication is provided
       - PGRST_DB_ANON_ROLE=${DB_ANON_ROLE}
+      # Overrides the base URL used within the OpenAPI self-documentation hosted at the API root path
+      - PGRST_OPENAPI_SERVER_PROXY_URI=http://localhost:3000
     networks:
       - postgrest-backend
     restart: always
