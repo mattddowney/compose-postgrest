@@ -42,6 +42,12 @@ app.queryCity = function (cityName) {
         })
         .then(function (j) {
             console.log(j);
+            
+            // add commas to population numbers
+            for (let i = 0, max = j.length; i < max; i++) {
+                j[i].population = j[i].population.toLocaleString('en-US');
+            }
+
             app.addResultRows(j);
         })
 }
