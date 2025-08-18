@@ -27,12 +27,12 @@ services:
   ##################
   postgrest-demo:
     container_name: postgrest-demo
-    image: nginx:mainline-alpine
+    image: caddy:alpine
     ports:
       - "80:80"
     volumes:
-      # anything in html directory is hosted via nginx
-      - "./html:/usr/share/nginx/html"
+      # anything in html directory is hosted via caddy
+      - "./html:/usr/share/caddy"
     restart: always
 
   #############
