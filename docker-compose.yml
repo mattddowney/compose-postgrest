@@ -30,9 +30,13 @@ services:
     image: caddy:alpine
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       # anything in html directory is hosted via caddy
       - "./html:/usr/share/caddy"
+      - ./Caddyfile:/etc/caddy/Caddyfile
+    networks:
+      - postgrest-backend
     restart: always
 
   #############
@@ -54,7 +58,7 @@ services:
       # The database role to use when no client authentication is provided
       - PGRST_DB_ANON_ROLE=${DB_ANON_ROLE}
       # Overrides the base URL used within the OpenAPI self-documentation hosted at the API root path
-      - PGRST_OPENAPI_SERVER_PROXY_URI=http://localhost:3000
+      - PGRST_OPENAPI_SERVER_PROXY_URI=https://localhost/api/
     networks:
       - postgrest-backend
     restart: always

@@ -1,0 +1,12 @@
+localhost {
+    root * /usr/share/caddy
+    file_server
+
+    handle_path /api/* {
+        reverse_proxy postgrest:3000
+    }
+
+    handle_path /swagger/* {
+        reverse_proxy swagger-ui:8080
+    }
+}
