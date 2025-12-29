@@ -19,7 +19,7 @@ node "Docker Host" as docker_host #91FFEC {
     rectangle "docker-compose.yml" as docker_compose_yml {
         database "PostgreSQL" as postgres #FFFF91
         node "PostgREST" as postgrest
-        node "NGINX" as nginx
+        node "Caddy" as caddy
     }
 
     rectangle "docker-compose.override.yml" as docker_compose_override_yml {
@@ -40,15 +40,14 @@ folder initdb [
     run at database startup
 ]
 
-client -right- nginx
-client -- postgrest
-client -- swagger_ui
+client -- caddy
+
+caddy -- postgrest
+caddy -- swagger_ui
 
 postgrest -- postgres
 
-postgrest -left- swagger_ui
-
-nginx -right- html
+caddy -right- html
 postgres -right- initdb
 
 @enduml
